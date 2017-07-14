@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 
 <html>
-<head>
+<head style="font-family:arial;">
+
 <title> Personality Quiz </title>
 <style>
+
+
 
 </style>
 </head>
@@ -13,34 +16,54 @@
 
 
 
-<div id = "myDiv">
+<div id = "myDiv" style="font-family:arial;">
 
 
   1. What is your favorite color:
   <br/ >
   <br />
-  red <input type="radio" id= "radio1" name="myRadio">
-  blue <input type="radio" id= "radio2" name="myRadio">
-  yellow <input type="radio" id= "radio3" name="myRadio">
-  green <input type="radio" id= "radio4" name="myRadio">
+  <input type="radio" id= "color1" name="colorQuestion"> red <br/ >
+  <input type="radio" id= "color2" name="colorQuestion"> blue <br/ >
+  <input type="radio" id= "color3" name="colorQuestion"> yellow <br/ >
+  <input type="radio" id= "color4" name="colorQuestion"> green <br/ >
   <br/ >
   <br />
   2. What summer activity do you most enjoy:
   <br/ >
   <br />
-  <input type="radio" id= "radio5" name="myRadio1"> Hiking <br/ >
-  <input type="radio" id= "radio6" name="myRadio1"> Swimming <br/ >
-  <input type="radio" id= "radio7" name="myRadio1"> Eating <br/ >
-  <input type="radio" id= "radio8" name="myRadio1"> Camping <br/ >
+  <input type="radio" id= "activity1" name="activityQuestion"> Hiking <br/ >
+  <input type="radio" id= "activity2" name="activityQuestion"> Swimming <br/ >
+  <input type="radio" id= "activity3" name="activityQuestion"> Eating <br/ >
+  <input type="radio" id= "activity4" name="activityQuestion"> Camping <br/ >
   <br/ >
   <br />
-  3. Which place do you most enjoy:
+  3. What is your favorite movie:
   <br/ >
   <br />
-  <input type="radio" id= "radio5" name="myRadio1"> School <br/ >
-  <input type="radio" id= "radio6" name="myRadio1"> Mall <br/ >
-  <input type="radio" id= "radio7" name="myRadio1">
-  <input type="radio" id= "radio8" name="myRadio1">
+  <input type="radio" id= "movie1" name="movieQuestion"> High School Musical <br/ >
+  <input type="radio" id= "movie2" name="movieQuestion"> The Notebook <br/ >
+  <input type="radio" id= "movie3" name="movieQuestion"> Avengers <br/>
+  <input type="radio" id= "movie4" name="movieQuestion"> Mean Girls <br/>
+
+  <br/ >
+  <br/ >
+  4. Which Superhero are you:
+  <br/ >
+  <br />
+  <input type="radio" id= "hero1" name="heroQuestion"> Hulk <br/ >
+  <input type="radio" id= "hero2" name="heroQuestion"> Superman <br/ >
+  <input type="radio" id= "hero3" name="heroQuestion"> Captain America <br/>
+  <input type="radio" id= "hero4" name="heroQuestion"> Batman <br/>
+
+  <br/ >
+  <br/ >
+  5. Which is your spirit animal:
+  <br/ >
+  <br />
+  <input type="radio" id= "animal1" name="animalQuestion"> Dolphin <br/ >
+  <input type="radio" id= "animal2" name="animalQuestion"> Squirrel <br/ >
+  <input type="radio" id= "animal3" name="animalQuestion"> gorilla <br/>
+  <input type="radio" id= "animal4" name="animalQuestion"> Honey Bee <br/>
 
   <br/ >
   <br/ >
@@ -57,46 +80,99 @@
 
 
   function getRadioInput(){
-    //var input = document.getElementById("myText1").value;
 
-
-    /*
-    if (input == "Pie" || input == "pie" && document.getElementById("radio1").checked){
-      document.getElementById("myDiv").innerHTML += "<br />" + "<br />" + input + " is gross"
-
-    }
-    else{
-      document.getElementById("myDiv").innerHTML += "<br />" + "<br />" + dessertString + input;
-  }
-*/
     var resultString = "You are ";
     var Bl=0;
     var s =0;
     var l =0;
     var Ba=0;
 
-    if (document.getElementById("radio1").checked){
-      s+=1
-      //document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Strawberry!";
-      //document.getElementById("strawberryPic").style.display = "block";
-    }
-    else if (document.getElementById("radio2").checked) {
-      Bl+=1
-      //document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Blueberry!";
-      //document.getElementById("blueberryPic").style.display = "block";
-    }
-    else if (document.getElementById("radio3").checked) {
-      Ba+=1
-    //  document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Banana!";
-    //  document.getElementById("bananaPic").style.display = "block";
+    if (document.getElementById("color1").checked){
+      s += 1
 
     }
-    else if (document.getElementById("radio4").checked) {
-      l+=1
-      //document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Lime!" ;
-      //document.getElementById("limePic").style.display = "block";
-  }
-    if ((s>Bl) && (s>Ba) && (s>l)){
+    else if (document.getElementById("color2").checked) {
+      Bl += 1
+
+    }
+    else if (document.getElementById("color3").checked) {
+      Ba += 1
+
+    }
+    else if (document.getElementById("color4").checked) {
+      l += 1
+
+    }
+    if (document.getElementById("activity1").checked){
+      Ba += 1
+
+    }
+    else if (document.getElementById("activity2").checked) {
+      Bl += 1
+
+    }
+    else if (document.getElementById("activity3").checked) {
+      s += 1
+
+    }
+    else if (document.getElementById("activity4").checked) {
+      l += 1
+
+    }
+
+    if (document.getElementById("movie1").checked){
+      s += 1
+
+    }
+    else if (document.getElementById("movie2").checked) {
+      Ba += 1
+
+    }
+    else if (document.getElementById("movie3").checked) {
+      Bl += 1
+
+    }
+    else if (document.getElementById("movie4").checked) {
+      l += 1
+
+    }
+
+    if (document.getElementById("hero1").checked){
+      l += 1
+
+    }
+    else if (document.getElementById("hero2").checked) {
+      Bl += 1
+
+    }
+    else if (document.getElementById("hero3").checked) {
+      s += 1
+
+    }
+    else if (document.getElementById("hero4").checked) {
+      Ba += 1
+
+    }
+
+
+    if (document.getElementById("animal1").checked){
+      s += 1
+
+    }
+    else if (document.getElementById("animal2").checked) {
+      l += 1
+
+    }
+    else if (document.getElementById("animal3").checked) {
+      Ba += 1
+
+    }
+    else if (document.getElementById("animal4").checked) {
+      Bl += 1
+
+    }
+
+  /*  if ((s>Bl) && (s>Ba) && (s>l)){
       document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Strawberry!";
       document.getElementById("strawberryPic").style.display = "block";
 
@@ -113,9 +189,72 @@
       document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Lime!" ;
       document.getElementById("limePic").style.display = "block";
     }
+*/
+    var p;
+    var q;
+    var pFruit;
+    var qFruit;
+    var finalFruit;
+
+    if (s > Bl){
+      p = s;
+      pFruit = "Strawberry";
+
+    }
+    else {
+      p = Bl;
+      pFruit = "Blueberry";
+    }
+
+
+
+    if (Ba > l){
+      q = Ba;
+      qFruit = "Banana";
+    }
+    else {
+      q = l;
+      qFruit = "Lime";
+    }
+
+
+
+    if (q > p) {
+      //here should be finalFruit = qFruit;
+      finalFruit = qFruit;
+
+    }
+    else {
+      //here should be finalFruit = pFruit;
+      finalFruit = pFruit;
+    }
+
+
+    if (finalFruit == "Lime") {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Lime!" ;
+      document.getElementById("limePic").style.display = "block";
+    }
+    else if (finalFruit == "Strawberry") {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Strawberry!";
+      document.getElementById("strawberryPic").style.display = "block";
+
+    }
+    else if (finalFruit == "Blueberry") {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Blueberry!";
+      document.getElementById("blueberryPic").style.display = "block";
+
+    }
+    else if (finalFruit == "Banana") {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Banana!";
+      document.getElementById("bananaPic").style.display = "block";
+
+    }
+
+
 
 
   }
+
 
 
 
